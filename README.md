@@ -73,7 +73,6 @@ You can use the QR Code Generator as a child component with the UI controls hidd
 ## Component Structure
 
 - **force-app/main/default/lwc/qrCodeGenerator** - The main LWC component
-- **force-app/main/default/classes/qrCodeGeneratorController.cls** - Apex controller for file saving functionality
 - **force-app/main/default/staticresources/qrcodejs** - QRCode.js library (already included)
 
 ## Contributing
