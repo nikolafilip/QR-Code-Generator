@@ -1,0 +1,58 @@
+<!-- QR Code Generator -->
+<template>
+    <lightning-card if:false={hideControls} title="QR Code Generator" icon-name="utility:qrcode">
+        <div class="slds-p-around_medium">
+            <!-- Input Section -->
+            <div class="slds-form slds-form_stacked">
+                <div class="slds-form-element">
+                    <lightning-input 
+                        label="Text to encode" 
+                        value={text} 
+                        onchange={handleInputChange}
+                        placeholder="Enter URL, text or contact information">
+                    </lightning-input>
+                </div>
+                
+                <div class="slds-grid slds-gutters slds-m-top_medium">
+                    <div class="slds-col">
+                        <lightning-combobox
+                            label="Error Correction Level"
+                            value={errorCorrectionLevel}
+                            options={errorCorrectionOptions}
+                            onchange={handleErrorLevelChange}>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-slider 
+                            label="Size" 
+                            value={qrSize} 
+                            min="100" 
+                            max="600" 
+                            step="50" 
+                            onchange={handleSizeChange}>
+                        </lightning-slider>
+                    </div>
+                </div>
+                
+                <div class="slds-m-top_medium">
+                    <lightning-button 
+                        label="Generate QR Code" 
+                        variant="brand" 
+                        onclick={handleGenerate}
+                        class="slds-m-right_x-small">
+                    </lightning-button>
+                </div>
+            </div>
+            
+            <!-- QR Code Display -->
+            <div class="slds-m-top_large">
+                <div class="qr-code-container slds-align_absolute-center"></div>
+            </div>
+        </div>
+    </lightning-card>
+
+    <!-- QR Code only version (no UI controls) -->
+    <div if:true={hideControls} class="qr-code-only-container">
+        <div class="qr-code-container slds-align_absolute-center"></div>
+    </div>
+</template>

@@ -1,0 +1,15 @@
+.qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+canvas.qr-canvas {
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
