@@ -23,7 +23,7 @@ A Lightning Web Component (LWC) that generates QR codes directly in Salesforce. 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/qrcode-generator-lwc.git
+   git clone https://github.com/nikolafilip/qrcode-generator-lwc.git
    cd qrcode-generator-lwc
    ```
 
